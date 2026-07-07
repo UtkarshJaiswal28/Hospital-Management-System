@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Top Bar */
+
+.topbar{
+    width:100%;
+    background:#eef5ff;
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    padding:15px 0;
+}
+
+.top-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.top-item svg{
+    color:#0d6efd;
+    font-size:22px;
+}
+
+.top-item span{
+    font-size:13px;
+    color:#666;
+}
+
+.top-item p{
+    color:#1c3d72;
+    font-weight:bold;
+    margin-top:3px;
+}
+
+/* Navbar */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    width:100%;
+    background:#1E3A8A;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 80px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-icon{
+    color:white;
+    font-size:42px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text a{
+    text-decoration:none;
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.logo-text p{
+    color:#d5e3ff;
+    font-size:13px;
+}
+
+/* Links */
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    position:relative;
+    transition:.3s;
+}
+
+/* Hover Line */
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0%;
+    height:3px;
+    background:#FFD43B;
+    transition:.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+.nav-links a:hover{
+    color:#FFD43B;
+}
+
+/* Login */
+
+.login-btn{
+    border:2px solid white;
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+/* Register */
+
+.register-btn{
+    background:white;
+    color:#1E3A8A !important;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.register-btn:hover{
+    background:#FFD43B;
+    color:#000 !important;
+}
+
+/* Logout */
+
+.logout-btn{
+    background:white;
+    color:#1E3A8A;
+    border:none;
+    padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#FFD43B;
+}
+
+/* Active Link */
+
+.active{
+    color:#FFD43B !important;
+}

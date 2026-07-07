@@ -1,0 +1,124 @@
+.hero{
+  background:#f5f8ff;
+}
+
+.hero-img{
+  flex:1;
+  height:600px;
+  width:100%;
+  border-radius:20px;
+}
+
+.section{
+  padding:80px 20px;
+  scroll-margin-top:100px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.section h2{
+  color:#0b1f4d;
+  font-size:32px;
+  margin-bottom:20px;
+  position:relative;
+  padding-bottom:12px;
+}
+.section h2::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:60px;
+  height:3px;
+  background:#2196f3;
+  border-radius:2px;
+}
+.section p{
+  max-width:700px;
+  color:#555;
+  line-height:1.7;
+  font-size:16px;
+}
+
+.about-section{ background:#fff; }
+.mission-section{ background:#f5f8ff; }
+.contact-section{ background:#fff; }
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  max-width:450px;
+  gap:16px;
+  margin-top:10px;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 8px 30px rgba(11,31,77,0.08);
+}
+.contact-form input,
+.contact-form textarea{
+  padding:12px 14px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:15px;
+  outline:none;
+  transition:border-color .2s;
+  font-family:inherit;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:#2196f3;
+}
+.contact-form button{
+  background:#0b1f4d;
+  color:#fff;
+  border:none;
+  padding:14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:15px;
+  transition:background .2s;
+}
+.contact-form button:hover{
+  background:#14306e;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+.mal{
+  margin-right: 5px;
+    height: 30px;
+    top: 5px;
+    position: relative;
+
+}
+
+section  h2{
+  transition: transform 0.5s ease;
+}
+
+section:hover h2{
+  transform: translateY(-15px);
+}
+.contact-form{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(11,31,77,0.18);
+}
+
+.contact-form button{
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.contact-form button:hover{
+  background:#14306e;
+  transform: translateY(-2px);
+}

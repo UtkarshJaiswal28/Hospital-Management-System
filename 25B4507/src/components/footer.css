@@ -1,0 +1,9 @@
+
+.footerclass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 60px;
+    background-color: #D3E8FC;;
+}
+

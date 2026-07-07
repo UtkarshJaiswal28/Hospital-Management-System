@@ -1,0 +1,76 @@
+.doctors-section{
+  padding:60px 80px;
+  text-align:center;
+}
+.doctors-section h2{
+  color:#0b1f4d;
+  font-size:32px;
+  margin-bottom:10px;
+}
+.doctors-sub{
+  color:#666;
+  margin-bottom:40px;
+}
+
+.doctor-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:24px;
+}
+
+.doctor-card{
+background-color: #ddf1fa; 
+ border-radius: 20px 20px 20px 20px;
+  padding:20px;
+  box-shadow:0 8px 24px rgba(11,31,77,0.08);
+  text-align:center;
+  transition:transform .2s;
+  border: 1px solid #e4dcdc;
+}
+.doctor-card:hover{
+      transition: 0.5s;
+  box-shadow: 10px 10px 0px 0px rgba(9.999999999999996, 96.00000000000004, 144, 0.8901960784313725);
+}
+
+.doctor-card:hover{
+  transform:translateY(-5px);
+}
+
+.doctor-image{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:14px;
+}
+
+.doctor-name{
+  color:#0b1f4d;
+  font-size:18px;
+  margin-bottom:4px;
+}
+.doctor-specialty{
+  color:#2196f3;
+  font-weight:600;
+  font-size:14px;
+  margin-bottom:4px;
+}
+.doctor-experience{
+  color:#777;
+  font-size:13px;
+  margin-bottom:16px;
+}
+
+.book-btn-wrap button{
+  background:#0b1f4d;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:600;
+  transition:background .2s;
+}
+.book-btn-wrap button:hover{
+  background:#14306e;
+}

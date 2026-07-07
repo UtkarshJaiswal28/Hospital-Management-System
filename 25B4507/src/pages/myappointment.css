@@ -1,0 +1,54 @@
+.myapp-section{
+  padding:60px 80px;
+}
+.myapp-section h2{
+  color:#0b1f4d;
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.myapp-loading, .myapp-empty{
+  text-align:center;
+  color:#777;
+}
+
+.myapp-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:24px;
+}
+
+.myapp-card{
+  background:#fff;
+  border-radius:16px;
+  padding:24px;
+  box-shadow:0 8px 24px rgba(11,31,77,0.08);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.myapp-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(11,31,77,0.15);
+}
+
+.myapp-card h3{
+  color:#0b1f4d;
+  margin-bottom:10px;
+}
+.myapp-card p{
+  color:#555;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.myapp-status{
+  display:inline-block;
+  margin-top:10px;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:600;
+}
+.status-pending{ background:#fff3cd; color:#856404; }
+.status-approved{ background:#d4edda; color:#155724; }
+.status-completed{ background:#d1ecf1; color:#0c5460; }
+.status-cancelled{ background:#f8d7da; color:#721c24; }
