@@ -9,4 +9,5 @@ urlpatterns = [
  path("logout/", logout_view),
  path("appointments/", create_appointment),
  path("my-appointments/", list_appointments),
+ path('csrf/', get_csrf_token),
 ]

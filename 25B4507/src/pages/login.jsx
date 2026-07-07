@@ -7,7 +7,7 @@ import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { API_BASE_URL } from "../config"
+import { API_BASE_URL,getCsrfToken } from "../config"
 
 
 function Login(){
@@ -33,12 +33,13 @@ const navigate = useNavigate()
         e.preventDefault()
         setloading(true)
              try {
+               const csrfToken = await getCsrfToken();
             const res = await fetch(`${API_BASE_URL}/api/login/`, {
                 method: "POST",
                 credentials: "include",
                 headers: {
                     "Content-Type": "application/json",
-                    "X-CSRFToken": getCookie("csrftoken")
+                    "X-CSRFToken": csrfToken
                 },
                 body: JSON.stringify({
                     username: form.username,

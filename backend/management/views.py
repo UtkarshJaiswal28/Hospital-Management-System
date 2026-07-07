@@ -5,7 +5,8 @@ from . models import *
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout as django_logout
 from rest_framework.permissions import IsAuthenticated
-
+from django.middleware.csrf import get_token
+from django.http import JsonResponse
 
 @api_view(["POST"])
 def User_register(request):
@@ -82,3 +83,6 @@ def list_appointments(request):
         for a in appointments
     ]
     return Response(data, status=200)
+
+def get_csrf_token(request):
+    return JsonResponse({'csrfToken': get_token(request)})
