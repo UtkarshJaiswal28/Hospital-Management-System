@@ -15,7 +15,7 @@ function Doctors(){
             navigate("/login")
             return
         }
-        navigate("/appointment", { state: { doctorName: doctor.name } })
+        navigate("/appointments", { state: { doctorName: doctor.name } })
     }
 
     return(
