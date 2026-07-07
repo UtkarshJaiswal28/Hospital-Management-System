@@ -116,7 +116,7 @@ const navigate = useNavigate()
       {isLoggedIn ? (
         <>
         <li>
-                <NavLink to="/myappointments">Appointment detaiils</NavLink>
+                <NavLink to="/myappointments">Appointment list</NavLink>
               </li>
                
          </>

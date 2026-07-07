@@ -7,10 +7,12 @@ import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-
+import { API_BASE_URL } from "../config"
 
 
 function Appointment(){
+    
+
     const [form, setForm] = useState({
         full_name: "",
         email: "",
@@ -40,7 +42,7 @@ function Appointment(){
 
         setLoading(true)
         try {
-          const res = await fetch("http://127.0.0.1:8000/api/appointments/", {
+          const res = await fetch(`${API_BASE_URL}/api/appointments/`, {
                 method: "POST",
                 credentials: "include",
                 headers: {

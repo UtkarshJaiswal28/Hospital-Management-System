@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import Navbar from "../components/navbar"
 import "./myappointment.css"
+import { API_BASE_URL } from "../config"
+import (API_BASE_URL)
 
 function MyAppointments(){
     const [appointments, setAppointments] = useState([])
@@ -11,7 +13,7 @@ function MyAppointments(){
  useEffect(() => {
     const fetchAppointments = async () => {
         try {
-          const res = await fetch("http://127.0.0.1:8000/api/my-appointments/", {
+          const res = await fetch(`${API_BASE_URL}/api/my-appointments/`, {
                 method: "GET",
                 credentials: "include"
             })

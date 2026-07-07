@@ -9,6 +9,8 @@ import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { API_BASE_URL } from "../config"
+
 
 function Register(){
     const [form,setForm] = useState({
@@ -43,7 +45,7 @@ function Register(){
         }
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/api/register/", {
+            const res = await fetch(`${API_BASE_URL}/api/register/`, {
                 method: "POST",
                 credentials: "include",
                 headers: {
