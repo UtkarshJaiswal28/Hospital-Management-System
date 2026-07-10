@@ -3,6 +3,11 @@
 DocPulse is a full-stack hospital management web application that allows patients to browse doctors, register/login, book appointments, and view their own appointment history. Built with **React (Vite)** on the frontend and **Django REST Framework** on the backend, using **session-based authentication**.
 
 ---
+## 🌐  Live Project
+
+🔗 **Website:** https://hospital-management-project-25b4507.netlify.app/
+
+---
 
 ## ✨ Features
 
@@ -32,7 +37,6 @@ DocPulse is a full-stack hospital management web application that allows patient
 ### 📋 My Appointments
 - Shows only the **logged-in user's own** appointments — filtered entirely server-side (`Appointment.objects.filter(user=request.user)`), so there's no way for one patient to see another's booking details, even by tampering with the browser.
 - Each appointment renders as a card with name, age, date, time, and a color-coded status badge (**Pending** / **Approved** / **Completed** / **Cancelled**).
-- Pending appointments have a **Cancel Appointment** button, which deletes the booking (ownership-checked via `get_object_or_404(..., user=request.user)` so users can't cancel someone else's appointment by guessing an ID).
 
 ### 🔔 Notifications & UX Polish
 - Toast pop-ups (`react-toastify`) confirm or warn on every key action: login success/failure, registration errors (duplicate username, password mismatch), appointment booked/cancelled, and network errors — with a short auto-close duration so they don't linger.
@@ -40,7 +44,7 @@ DocPulse is a full-stack hospital management web application that allows patient
 
 ### 🦶 Footer
 - Sticks to the bottom of short pages via a flex layout (instead of floating mid-page), and flows naturally after content on longer pages.
-- Includes social links, quick navigation links, department links, contact details, and a credits line.
+
 
 ---
 
@@ -58,7 +62,7 @@ DocPulse is a full-stack hospital management web application that allows patient
 - **Django REST Framework (DRF)** — API layer
 - **django-cors-headers** — CORS handling for frontend-backend communication
 - **SQLite** — default development database
-- **Session Authentication** (Django's built-in `authenticate()` / `login()` / `logout()`) with CSRF protection — no JWT
+- **Session Authentication** (Django's built-in `authenticate()` / `login()` / `logout()`) with CSRF protection
 
 
 
